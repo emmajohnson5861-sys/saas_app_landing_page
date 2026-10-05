@@ -1,0 +1,48 @@
+/* Image-led editorial composition using the shared Algofort design system. */
+.alp_portfolio { padding-block:var(--alp_intro-spacing); color:var(--alp_color-ink); position:relative; }
+.alp_portfolio-intro { display:grid; grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr); gap:var(--alp_intro-gap); align-items:start; margin-bottom:var(--alp_portfolio-intro-gap); }
+.alp_portfolio-description { color:#4e555c; font-size:var(--alp_intro-body-size); line-height:1.55; max-width:330px; margin:48px 0 0; }
+.alp_portfolio-heading h2 { margin:0; font-family:var(--alp_font-heading); font-size:var(--alp_intro-heading); font-weight:650; letter-spacing:-.05em; line-height:1.12; }
+.alp_portfolio-accent { display:block; color:var(--alp_color-accent); margin-top:7px; }
+.alp_portfolio-cta { margin-top:32px; }
+.alp_portfolio-grid { display:grid; grid-template-columns:repeat(24,minmax(0,1fr)); gap:var(--alp_portfolio-grid-gap); }
+.alp_portfolio-card { grid-column:span var(--alp_portfolio-span); min-width:0; }
+.alp_portfolio-project { position:relative; display:block; height:var(--alp_portfolio-card-height); width:100%; border:0; border-radius:var(--alp_portfolio-radius); padding:0; background:var(--alp_intro-surface); overflow:hidden; text-align:left; color:var(--alp_color-ink); }
+.alp_portfolio-project:focus-visible { outline:2px solid var(--alp_color-accent); outline-offset:5px; }
+.alp_portfolio-image { display:block; width:100%; height:100%; object-fit:cover; transition:transform 700ms var(--alp_ease); }
+.alp_portfolio-caption { position:absolute; left:8px; right:8px; bottom:8px; display:flex; align-items:center; justify-content:space-between; gap:12px; border-radius:calc(var(--alp_portfolio-radius) - 6px); background:#fff; padding:16px 18px 16px 22px; min-height:76px; box-shadow:0 2px 12px #01010104; }
+.alp_portfolio-caption-copy { min-width:0; }
+.alp_portfolio-category { display:block; color:var(--alp_color-muted); font-size:11px; line-height:1.4; margin-bottom:4px; }
+.alp_portfolio-name { display:block; font-size:var(--alp_portfolio-title-size); font-weight:600; line-height:1.3; letter-spacing:-.025em; }
+.alp_portfolio-arrow { display:grid; place-items:center; width:40px; height:40px; flex-shrink:0; background:var(--alp_intro-surface); border-radius:50%; transition:background var(--alp_duration-fast),color var(--alp_duration-fast); }
+.alp_portfolio-arrow svg { width:19px; height:19px; stroke-width:1.5; transition:transform 400ms var(--alp_ease); }
+.alp_portfolio-project:hover .alp_portfolio-image { transform:scale(1.035); }
+.alp_portfolio-project:hover .alp_portfolio-arrow { background:var(--alp_color-accent); color:#fff; }
+.alp_portfolio-project:hover .alp_portfolio-arrow svg { transform:rotate(45deg); }
+.alp_portfolio-note { font-size:12px; color:var(--alp_color-muted); margin:24px 0 0; line-height:1.5; }
+html[data-alp-scroll-lock] { overflow:hidden; }
+.alp_portfolio-dialog { margin:auto; width:min(960px,calc(100% - 32px)); max-height:calc(100dvh - 32px); padding:0; border:0; border-radius:var(--alp_portfolio-radius); background:var(--alp_page-surface); color:var(--alp_color-ink); overflow:auto; overscroll-behavior:contain; font-family:var(--alp_font-body); }
+.alp_portfolio-dialog::backdrop { background:#0d0f11b8; }
+.alp_portfolio-preview { animation:alp_portfolio-preview-in 280ms var(--alp_ease) both; }
+.alp_portfolio-preview-header { display:flex; align-items:center; justify-content:space-between; padding:14px 22px; font-size:12px; color:var(--alp_color-muted); gap:16px; }
+.alp_portfolio-preview-header > span > span { margin-inline:8px; color:var(--alp_color-accent); }
+.alp_portfolio-icon-button { width:40px; height:40px; border:0; border-radius:50%; display:grid; place-items:center; background:var(--alp_intro-surface); color:var(--alp_color-ink); flex-shrink:0; }
+.alp_portfolio-icon-button:hover { color:var(--alp_color-accent); }
+.alp_portfolio-icon-button svg { width:20px; height:20px; stroke-width:1.5; }
+.alp_portfolio-preview-media { background:var(--alp_intro-surface); }
+.alp_portfolio-preview-media img { width:100%; height:auto; max-height:60dvh; object-fit:contain; display:block; }
+.alp_portfolio-preview-copy { padding:28px; }
+.alp_portfolio-preview-copy h3 { margin:8px 0 12px; font-size:clamp(24px,3vw,36px); font-weight:650; letter-spacing:-.04em; line-height:1.2; }
+.alp_portfolio-preview-copy p { margin:0; color:var(--alp_color-muted); font-size:16px; max-width:650px; line-height:1.6; }
+.alp_portfolio-tags { list-style:none; margin:18px 0 24px; padding:0; display:flex; gap:8px; flex-wrap:wrap; }
+.alp_portfolio-tags li { background:var(--alp_intro-surface); border-radius:var(--alp_radius-pill); padding:7px 12px; color:var(--alp_color-muted); font-size:11px; }
+.alp_portfolio-preview-actions { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+.alp_portfolio-preview-navigation { display:flex; align-items:center; gap:14px; font-size:12px; color:var(--alp_color-muted); }
+@keyframes alp_portfolio-preview-in { from { opacity:0; transform:translateY(10px) scale(.985); } to { opacity:1; transform:none; } }
+@media(max-width:1023px) { .alp_portfolio-intro { grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:32px; }.alp_portfolio-description { margin-top:32px; }.alp_portfolio-caption { padding:14px; }.alp_portfolio-name { font-size:15px; } }
+@media(max-width:640px) {
+ .alp_portfolio-intro { grid-template-columns:1fr; gap:28px; }.alp_portfolio-description { margin-top:20px; max-width:none; }.alp_portfolio-intro { margin-bottom:36px; }.alp_portfolio-heading { order:0; }.alp_portfolio-cta { margin-top:26px; }
+ .alp_portfolio-grid { grid-template-columns:1fr; gap:16px; }.alp_portfolio-card { grid-column:auto; }.alp_portfolio-project { height:clamp(360px,112vw,520px); }.alp_portfolio-caption { padding:14px 16px; min-height:72px; }.alp_portfolio-name { font-size:16px; }
+ .alp_portfolio-preview-copy { padding:22px; }.alp_portfolio-preview-header { padding:12px 16px; }.alp_portfolio-preview-media img { max-height:50dvh; }.alp_portfolio-preview-copy p { font-size:14px; }
+}
+@media(prefers-reduced-motion:reduce) { .alp_portfolio-image,.alp_portfolio-arrow,.alp_portfolio-arrow svg { transition:none; }.alp_portfolio-project:hover .alp_portfolio-image,.alp_portfolio-project:hover .alp_portfolio-arrow svg { transform:none; }.alp_portfolio-preview { animation:none; } }

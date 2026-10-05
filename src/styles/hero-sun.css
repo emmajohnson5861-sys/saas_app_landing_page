@@ -1,0 +1,106 @@
+/* Light RedSun adaptation. Native gradients/masks replace raster artwork.
+   Lighting is static; the existing motion layer only animates transform/opacity. */
+.alp_sun-hero { padding-bottom:32px; }
+@media (min-width:768px) and (prefers-reduced-motion:no-preference) {
+  .alp_sun-hero .alp_saas-copy { will-change:transform,opacity; }
+  .alp_sun-orbit,.alp_sun-app { will-change:transform; backface-visibility:hidden; }
+}
+.alp_hero-flow { display:flex; justify-content:center; align-items:center; gap:18px; padding:0; margin:28px auto 0; list-style:none; color:var(--alp_color-muted); font-size:var(--alp_hero-flow-font); font-weight:500; }
+.alp_hero-flow-step { display:flex; align-items:center; gap:9px; white-space:nowrap; }
+.alp_hero-flow-icon { display:grid; place-items:center; width:30px; height:30px; border-radius:50%; color:var(--alp_color-accent); background:color-mix(in srgb,var(--alp_color-accent) 6%,transparent); }
+.alp_hero-flow-icon svg { width:18px; height:18px; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.alp_hero-flow-connector { width:48px; height:8px; margin-left:9px; }
+.alp_hero-flow-line { stroke:color-mix(in srgb,var(--alp_color-ink) 14%,transparent); stroke-width:1; stroke-dasharray:1; animation:alp_hero-trace-draw var(--alp_hero-line-draw-duration) var(--alp_ease) both; }
+.alp_hero-flow-arrow { stroke:var(--alp_color-accent); stroke-width:1; stroke-linecap:round; stroke-linejoin:round; opacity:.5; }
+@keyframes alp_hero-trace-draw { from { stroke-dashoffset:1; } to { stroke-dashoffset:0; } }
+@media(max-width:767px) { .alp_hero-flow { gap:10px; font-size:13px; margin-top:24px; } .alp_hero-flow-step { gap:6px; } .alp_hero-flow-icon { width:26px; height:26px; } .alp_hero-flow-connector { width:22px; margin-left:4px; } }
+@media(prefers-reduced-motion:reduce) { .alp_hero-flow-line { animation:none; } }
+.alp_sun-hero .alp_saas-copy { z-index:0; padding-top:var(--alp_sun-copy-top); max-width:var(--alp_sun-copy-width); }
+.alp_sun-hero .alp_saas-eyebrow { font-size:14px; padding:4px 12px 4px 4px; gap:9px; margin-bottom:24px; }
+.alp_sun-hero .alp_saas-eyebrow-tag { padding:4px 10px; }
+.alp_sun-hero .alp_saas-title { font-size:var(--alp_sun-title-size); font-weight:500; line-height:1.15; letter-spacing:-.045em; }
+.alp_sun-hero .alp_saas-title-line + .alp_saas-title-line { margin-top:0; }
+.alp_sun-hero .alp_saas-description { max-width:var(--alp_sun-description-width); font-size:var(--alp_sun-body-size); margin-top:26px; line-height:1.5; }
+.alp_sun-hero .alp_saas-actions { margin-top:32px; gap:16px; }
+.alp_sun-stage { position:relative; z-index:1; isolation:isolate; max-width:var(--alp_demo-width); margin:24px auto 0; padding-top:var(--alp_sun-app-offset); }
+/* Extend the ring behind the opaque app so its edge stays connected while
+   scrolling. Clip inside the dashboard instead of fading above its top edge. */
+.alp_sun-orbit-clip { position:absolute; z-index:0; inset:0 0 auto; height:calc(var(--alp_sun-app-offset) + var(--alp_sun-ring-overlap)); overflow:clip; pointer-events:none; }
+.alp_sun-orbit { position:absolute; top:0; left:50%; width:var(--alp_sun-orbit-width); aspect-ratio:1; translate:-50% 0; pointer-events:none; transform-origin:50% 50%; }
+.alp_sun-orbit-entrance { width:100%; height:100%; transform-origin:50% 50%; }
+.alp_sun-sculpture { position:relative; width:100%; height:100%; }
+.alp_sun-sculpture > span { position:absolute; display:block; border-radius:50%; }
+/* Soft atmospheric light above the outer rim. No filter is animated. */
+.alp_sun-bloom {
+  inset:0; opacity:var(--alp_sun-glow-opacity);
+  background:radial-gradient(closest-side,transparent 78%,color-mix(in srgb,var(--alp_color-accent) 22%,transparent) 88%,color-mix(in srgb,var(--alp_color-accent) 9%,transparent) 94%,transparent 100%);
+  mask-image:linear-gradient(#000 0%,#000 16%,transparent 48%);
+  filter:blur(18px);
+}
+.alp_sun-rim-halo {
+  inset:var(--alp_sun-ring-inset);
+  background:conic-gradient(from -90deg,transparent 8deg,#fff8 30deg,#fff 60deg,#fff7 102deg,color-mix(in srgb,var(--alp_color-accent) 28%,transparent) 145deg,transparent 190deg,transparent 360deg);
+  mask-image:radial-gradient(closest-side,transparent 96%,#000 98%,#000 100%);
+  filter:blur(7px);
+}
+/* A flat annular face. Angular falloff confines orange to the upper arc. */
+.alp_sun-ring-base {
+  inset:var(--alp_sun-ring-inset); background:var(--alp_page-surface);
+  mask-image:radial-gradient(closest-side,transparent calc(var(--alp_sun-ring-cutout) - .2%),#000 var(--alp_sun-ring-cutout),#000 99.8%,transparent 100%);
+}
+.alp_sun-ring-face {
+  inset:var(--alp_sun-ring-inset);
+  background:conic-gradient(from -90deg,
+    transparent 0deg,color-mix(in srgb,var(--alp_color-accent) 8%,transparent) 15deg,
+    color-mix(in srgb,var(--alp_color-accent) 68%,transparent) 38deg,
+    var(--alp_color-accent) 65deg,color-mix(in srgb,var(--alp_color-accent),white 42%) 96deg,
+    color-mix(in srgb,var(--alp_color-accent),white 8%) 118deg,
+    color-mix(in srgb,var(--alp_color-accent) 65%,transparent) 143deg,
+    color-mix(in srgb,var(--alp_color-accent) 7%,transparent) 173deg,
+    transparent 195deg,transparent 315deg,color-mix(in srgb,var(--alp_color-accent) 3%,transparent) 340deg,transparent 360deg);
+  mask-image:radial-gradient(closest-side,transparent calc(var(--alp_sun-ring-cutout) - .2%),#000 var(--alp_sun-ring-cutout),#000 99.8%,transparent 100%);
+}
+/* Radial bevels create depth without the rounded glossy-tube appearance. */
+.alp_sun-ring-shading {
+  inset:var(--alp_sun-ring-inset);
+  background:radial-gradient(closest-side,
+    transparent calc(var(--alp_sun-ring-cutout) - 1%),#75655329 var(--alp_sun-ring-cutout),
+    #fff9 calc(var(--alp_sun-ring-cutout) + .8%),transparent calc(var(--alp_sun-ring-cutout) + 2%),
+    #fff0 91%,#fff2 96%,#fffc 99.7%,transparent 100%);
+  mask-image:linear-gradient(#000 0%,#000 12%,#0007 28%,transparent 48%);
+}
+.alp_sun-outer-rim,.alp_sun-inner-rim {
+  mask-image:radial-gradient(closest-side,transparent calc(100% - var(--alp_sun-rim-width)),#000 calc(100% - var(--alp_sun-rim-width) + .5px),#000 calc(100% - .5px),transparent 100%);
+}
+.alp_sun-outer-rim {
+  inset:var(--alp_sun-ring-inset);
+  background:conic-gradient(from -90deg,#e5d5c555 0deg,#fff 28deg,#fff 70deg,#ffeddaa6 112deg,#c79f7b66 165deg,#c8bcaf33 220deg,#d8c6b244 290deg,#e5d5c555 360deg);
+}
+.alp_sun-inner-rim {
+  inset:var(--alp_sun-inner-inset);
+  background:conic-gradient(from -90deg,#dac4ae33 0deg,#fff8 35deg,#fff 65deg,#ece1d8aa 110deg,#b9aa9a55 180deg,#c8bcaf22 240deg,#dac4ae33 360deg);
+}
+.alp_sun-inner-halo {
+  inset:var(--alp_sun-inner-inset);
+  background:radial-gradient(closest-side,transparent 94%,#b4a89920 97%,#fff9 99%,transparent 100%);
+  mask-image:linear-gradient(#000,#0008 25%,transparent 50%);
+  filter:blur(4px);
+}
+.alp_sun-app-entrance { position:relative; z-index:1; }
+.alp_sun-app { position:relative; padding:8px; background:color-mix(in srgb,var(--alp_page-surface),white 65%); border-radius:24px; box-shadow:none; transform-origin:50% 30%; }
+.alp_sun-hero .alp_demo-wrap { margin:0; }
+.alp_sun-hero .alp_demo-wrap.alp_reveal { animation:none; }
+.alp_sun-app-fade { position:absolute; z-index:2; inset:auto -1px -1px; height:28%; background:linear-gradient(transparent,var(--alp_page-surface)); border-radius:0 0 24px 24px; pointer-events:none; }
+.alp_sun-app:focus-within .alp_sun-app-fade { opacity:0 !important; }
+.alp_sun-hero .alp_logos { position:relative; z-index:1; margin-top:80px; }
+@media(max-width:1023px) { .alp_sun-hero { --alp_sun-copy-top:60px; --alp_sun-app-offset:220px; } }
+@media(max-width:767px) {
+  .alp_sun-hero { --alp_sun-copy-top:48px; --alp_sun-app-offset:130px; --alp_sun-title-size:clamp(38px,8.2vw,58px); --alp_sun-body-size:18px; --alp_sun-orbit-width:120%; }
+  .alp_sun-hero .alp_saas-eyebrow { font-size:11px; gap:6px; padding-right:7px; margin-bottom:22px; }
+  .alp_sun-hero .alp_saas-eyebrow-tag { padding:3px 7px; }
+  .alp_sun-hero .alp_saas-description { margin-top:22px; }
+  .alp_sun-hero .alp_saas-actions { gap:16px; }
+  .alp_sun-app { padding:5px; border-radius:20px; }
+  .alp_sun-hero .alp_logos { margin-top:52px; }
+}
+@media(prefers-reduced-motion:reduce) { .alp_sun-app-fade { display:none; } }

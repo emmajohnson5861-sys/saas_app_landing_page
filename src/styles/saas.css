@@ -1,0 +1,15 @@
+/* Shared SaaS campaign header. Hero and interactive demo: dashboard.css. */
+/* One continuous canvas. Transparent section backgrounds expose the same soft glows. */
+.alp_saas-page {
+  background-color:var(--alp_page-surface);
+  background-image:radial-gradient(ellipse 65% 34% at 0% 32%,var(--alp_page-glow),transparent 75%),radial-gradient(ellipse 60% 32% at 100% 70%,var(--alp_page-glow-soft),transparent 75%);
+  background-size:100% var(--alp_page-gradient-height);
+  background-repeat:repeat-y;
+}
+.alp_saas-page .alp_saas-header { background:transparent; }
+.alp_saas-header .alp_header-inner { max-width:1440px; }
+.alp_saas-header .alp_nav { position:absolute; left:50%; transform:translateX(-50%); margin:0; gap:var(--alp_space-8); }
+.alp_saas-header .alp_header-actions { margin-left:auto; }
+.alp_saas-header .alp_header-cta { min-height:42px; font-size:var(--alp_text-xs); }
+@media (max-width:1100px) { .alp_saas-header .alp_nav { gap:var(--alp_space-5); } }
+@media (max-width:1023px) { .alp_saas-header .alp_nav { display:none; } }

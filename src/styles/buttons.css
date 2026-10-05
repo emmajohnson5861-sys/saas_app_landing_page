@@ -1,0 +1,55 @@
+/* Raised surfaces from the supplied orange-button.html and white-button.html. */
+.alp_button-3d.alp_button-orange {
+  --alp_button-bg:var(--alp_button-orange-gradient);
+  --alp_button-edge:#f48b43; --alp_button-text:#fff;
+  --alp_button-shadow:inset 0 2px 1px #ffe0b1f2,inset 2px 0 2px #ffb869a6,inset -2px 0 2px #ffa74f8c,inset 0 -3px 2px #d54a0059,0 2px 2px #ea600c40,0 7px 11px #ff701647,0 13px 22px #ff802831;
+  --alp_button-text-shadow:0 1px 2px #8f350073;
+  --alp_button-inner:#ffb56f52; --alp_button-inner-top:#ffd199a6; --alp_button-inner-bottom:#e04f003b; --alp_button-glow:#ff72183d;
+}
+.alp_button-3d.alp_button-white {
+  --alp_button-bg:var(--alp_button-white-gradient);
+  --alp_button-edge:#d5d5d5; --alp_button-text:#303030;
+  --alp_button-shadow:inset 0 2px 1px #fff,inset 2px 0 2px #ffffffd9,inset -2px 0 2px #ffffffbf,inset 0 -3px 2px #00000017,0 2px 2px #00000014,0 7px 11px #0000001a,0 13px 22px #0000000f;
+  --alp_button-text-shadow:0 1px 0 #fffffff2;
+  --alp_button-inner:#0000000a; --alp_button-inner-top:#fffffff2; --alp_button-inner-bottom:#00000017; --alp_button-glow:#0000001a;
+}
+.alp_saas-page .alp_button-3d {
+  position:relative; isolation:isolate; display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  border:1px solid var(--alp_button-edge); border-radius:var(--alp_button-3d-radius);
+  background:var(--alp_button-bg); color:var(--alp_button-text); box-shadow:var(--alp_button-shadow);
+  font-family:var(--alp_font-body); font-weight:500; line-height:1.2; text-shadow:var(--alp_button-text-shadow);
+  text-decoration:none; cursor:pointer; overflow:visible; transition:transform var(--alp_duration-fast) var(--alp_ease);
+}
+.alp_button-3d::before {
+  content:""; position:absolute; inset:3px; border-radius:calc(var(--alp_button-3d-radius) - 4px);
+  border:1px solid var(--alp_button-inner); border-top-color:var(--alp_button-inner-top); border-bottom-color:var(--alp_button-inner-bottom); pointer-events:none;
+}
+.alp_button-3d::after {
+  content:""; position:absolute; z-index:-1; left:9px; right:9px; bottom:-10px; height:15px;
+  border-radius:50%; background:var(--alp_button-glow); filter:blur(9px); pointer-events:none;
+}
+.alp_saas-page .alp_button-3d:hover:not(:disabled) { transform:translateY(-1px); text-decoration:none; }
+.alp_saas-page .alp_button-3d:active:not(:disabled) { transform:translateY(1px); }
+.alp_saas-page .alp_button-3d:focus-visible { outline:2px solid var(--alp_color-accent-text); outline-offset:5px; }
+.alp_saas-page .alp_button-3d:disabled { opacity:.5; cursor:not-allowed; box-shadow:none; text-shadow:none; }
+.alp_button-3d:disabled::after { display:none; }
+.alp_saas-page .alp_button.alp_button-3d {
+  height:var(--alp_cta-height); min-height:var(--alp_cta-height); width:fit-content; min-width:0; max-width:100%; flex-shrink:0;
+  padding:12px 24px; font-size:var(--alp_cta-font-size);
+}
+.alp_saas-page .alp_demo-action.alp_button-3d,
+.alp_saas-page .alp_demo-text-button.alp_button-3d,
+.alp_saas-page .alp_dialog-actions > .alp_button-3d {
+  min-height:var(--alp_button-compact-height); padding:9px 14px; font-size:var(--alp_demo-font);
+}
+.alp_demo-project-bottom { flex-wrap:wrap; gap:12px; }
+.alp_split-word { white-space:nowrap; }
+@media (max-width:767px) {
+  .alp_saas-actions { flex-direction:column; gap:18px; }
+  .alp_saas-header .alp_header-actions { display:none; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .alp_saas-page .alp_button-3d { transition:none; }
+  .alp_saas-page .alp_button-3d:is(:hover,:active) { transform:none; }
+}
+.alp_saas-page .alp_button-3d:hover, .alp_saas-page .alp_dialog-actions > .alp_button-3d { background:var(--alp_button-bg); color:var(--alp_button-text); }

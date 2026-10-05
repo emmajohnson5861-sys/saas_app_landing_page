@@ -1,0 +1,16 @@
+.alp_logos { max-width:var(--alp_intro-width); margin:72px auto 24px; }
+.alp_logos-heading { display:flex; align-items:center; justify-content:center; gap:18px; margin-bottom:32px; text-align:center; }
+.alp_logos-heading p { margin:0; font-size:var(--alp_intro-detail-size); color:var(--alp_color-muted); line-height:1.5; }
+.alp_logos-window { overflow:hidden; mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent); padding-block:12px; }
+.alp_logos-track { display:flex; width:max-content; animation:alp_logos-glide var(--alp_logos-duration) linear infinite; animation-play-state:paused; }
+.alp_logos[data-running="true"] .alp_logos-track { animation-play-state:running; }
+.alp_logos-window:hover .alp_logos-track { animation-play-state:paused; }
+.alp_logos-group { display:flex; align-items:center; gap:var(--alp_logos-gap); margin:0; padding:0 var(--alp_logos-gap) 0 0; list-style:none; flex-shrink:0; }
+.alp_logos-brand { width:var(--alp_logos-item-width); display:flex; align-items:center; justify-content:center; gap:10px; color:#6b6b65; white-space:nowrap; }
+.alp_logos-mark { width:28px; height:28px; flex-shrink:0; }
+.alp_logos-brand > span { font-family:var(--alp_font-heading); font-size:25px; font-weight:650; letter-spacing:-.055em; }
+.alp_logos-brand-kinetik > span { font-size:20px; letter-spacing:.02em; font-weight:700; }
+.alp_logos-brand-lumio > span { font-weight:500; }
+@keyframes alp_logos-glide { to { transform:translateX(-50%); } }
+@media(max-width:767px) { .alp_logos { margin-top:48px; }.alp_logos-heading { gap:12px; margin-bottom:24px; }.alp_logos-heading p { font-size:14px; }.alp_logos-brand > span { font-size:23px; } }
+@media(prefers-reduced-motion:reduce) { .alp_logos-track { animation:none; width:100%; }.alp_logos-group { flex-wrap:wrap; justify-content:center; width:100%; row-gap:28px; padding:0; gap:28px; }.alp_logos-group[aria-hidden="true"] { display:none; }.alp_logos-window { mask-image:none; }.alp_logos-brand { width:140px; } }

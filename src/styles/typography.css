@@ -1,0 +1,65 @@
+/* Shared type scale, applied after legacy component rules so small breakpoint
+   values cannot silently shrink the marketing text. Edit tokens.css to tune. */
+.alp_saas-title { font-size:var(--alp_saas-heading-size); font-weight:var(--alp_heading-weight); letter-spacing:var(--alp_heading-tracking); word-spacing:.035em; line-height:1.08; }
+.alp_saas-description { font-size:var(--alp_intro-body-size); max-width:760px; margin-top:28px; line-height:1.5; }
+.alp_saas-eyebrow,.alp_section-eyebrow { font-size:var(--alp_label-size); max-width:100%; }
+.alp_section-eyebrow { padding:6px 16px 6px 6px; gap:10px; }
+.alp_section-eyebrow-icon { width:28px; height:28px; }
+.alp_section-eyebrow-icon svg { width:16px; height:16px; }
+.alp_intro-copy h2,.alp_cap-heading h2,.alp_portfolio-heading h2,.alp_product-services .alp_product-title,.alp_product-dev-title,.alp_footer-invitation h2 { font-size:var(--alp_intro-heading); font-weight:var(--alp_heading-weight); letter-spacing:var(--alp_heading-tracking); word-spacing:.035em; line-height:1.1; }
+.alp_intro-description,.alp_cap-description,.alp_portfolio-description,.alp_product-dev-description,.alp_clients-description { font-size:var(--alp_intro-body-size); line-height:1.5; }
+.alp_cap-heading { max-width:880px; }
+.alp_cap-description { max-width:730px; }
+.alp_blueprint-heading h3 { font-family:var(--alp_font-heading); font-size:34px; font-weight:var(--alp_heading-weight); }
+.alp_blueprint-heading p,.alp_blueprint-layer-label { font-size:var(--alp_ui-label-size); }
+.alp_blueprint-layer h4 { font-family:var(--alp_font-heading); font-size:20px; }
+.alp_blueprint-layer ul > li { font-size:var(--alp_ui-label-size); }
+.alp_blueprint-footer { font-size:14px; }
+.alp_cap-block h3,.alp_cap-block-integrations h3,.alp_cap-block-cloud h3 { font-family:var(--alp_font-heading); font-size:var(--alp_card-heading-size); font-weight:var(--alp_heading-weight); }
+.alp_cap-block-copy > p,.alp_cap-block-integrations .alp_cap-block-copy > p { font-size:var(--alp_card-body-size); line-height:1.5; }
+.alp_cap-block-copy { flex-basis:36%; }
+.alp_cap-product-dashboard aside > span,.alp_cap-growth-dashboard aside > span { font-size:10px; }
+.alp_cap-product-dashboard .alp_cap-dash-top,.alp_cap-growth-heading { font-size:var(--alp_ui-label-size); }
+.alp_cap-product-dashboard .alp_cap-dash-top small { font-size:11px; }
+.alp_cap-product-dashboard .alp_cap-mini-metrics span,.alp_cap-growth-metrics > div > span { font-size:9px; white-space:normal; }
+.alp_cap-product-dashboard .alp_cap-mini-metrics strong,.alp_cap-growth-metrics strong { font-size:18px; }
+.alp_cap-flow-step p,.alp_cap-float-label { font-size:var(--alp_ui-label-size); }
+.alp_cap-flow-step small { font-size:11px; }
+.alp_product-card-content p { font-size:16px; line-height:1.45; }
+.alp_portfolio-name { font-size:var(--alp_portfolio-title-size); }
+.alp_portfolio-category { font-size:var(--alp_label-size); }
+.alp_portfolio-note { font-size:14px; }
+.alp_client-attribution strong { font-size:24px; }
+.alp_client-attribution > span > span { font-size:15px; }
+.alp_footer-layout { grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:48px; }
+.alp_footer-description { font-size:19px; max-width:480px; }
+.alp_footer-column h3 { font-size:18px; }
+.alp_footer-column li { font-size:16px; overflow-wrap:anywhere; }
+.alp_footer-email-prompt { font-size:16px; }
+.alp_footer-email { font-size:21px; }
+.alp_footer-bottom p,.alp_footer-top { font-size:14px; }
+.alp_demo-panel-heading p,.alp_demo-metric > div > span,.alp_demo-card-heading h3 { font-size:12px; }
+.alp_demo-metric small { font-size:11px; }
+.alp_demo-shell .alp_dropdown-trigger { font-size:12px; }
+.alp_demo-panel-heading h2 { font-family:var(--alp_font-heading); }
+.alp_split-word,.alp_split-word-mask,.alp_split-char { display:inline-block; position:relative; vertical-align:baseline; }
+.alp_split-line,.alp_split-line-mask { display:block; }
+/* Give descenders room inside the entrance masks without altering line spacing. */
+.alp_split-word-mask {
+  padding-block:var(--alp_text-mask-bleed);
+  margin-block:calc(-1 * var(--alp_text-mask-bleed));
+}
+@media(max-width:1100px) and (min-width:768px) {
+ .alp_blueprint-layer { gap:12px; padding:22px 12px; }.alp_blueprint-layer h4 { font-size:18px; }.alp_blueprint-layer ul > li { font-size:11px; padding:6px 8px; }.alp_blueprint-heading h3 { font-size:29px; }
+ .alp_cap-block-design,.alp_cap-block-analytics { flex-direction:column; }.alp_cap-block-copy { flex:none; }.alp_cap-block-automation { flex-direction:column; }.alp_cap-block-integrations { flex-direction:column; gap:24px; }.alp_cap-preview { max-width:440px; }.alp_cap-orbit { max-width:240px; margin:auto; }
+ .alp_footer-layout { grid-template-columns:1fr; }
+}
+@media(max-width:767px) {
+ :root { --alp_intro-heading:clamp(36px,9vw,48px); --alp_saas-heading-size:clamp(38px,9.8vw,64px); --alp_intro-body-size:18px; --alp_card-body-size:17px; --alp_card-heading-size:28px; --alp_portfolio-title-size:19px; --alp_product-card-size:26px; }
+ .alp_saas-title-line + .alp_saas-title-line { margin-top:0; }.alp_saas-description { margin-top:24px; }.alp_blueprint-heading h3 { font-size:29px; }.alp_blueprint-layer h4 { font-size:19px; }.alp_blueprint-layer ul > li { font-size:11px; }.alp_blueprint-footer { font-size:12px; }
+ .alp_cap-product-dashboard aside > span,.alp_cap-growth-dashboard aside > span { font-size:9px; }.alp_cap-product-dashboard .alp_cap-mini-metrics strong { font-size:16px; }.alp_cap-product-dashboard .alp_cap-mini-metrics span { font-size:8px; }
+ .alp_footer-layout { grid-template-columns:1fr; }.alp_footer-description { font-size:18px; }.alp_footer-column li { font-size:15px; }.alp_footer-email { font-size:20px; }.alp_footer-bottom p,.alp_footer-top { font-size:12px; }
+ .alp_client-attribution strong { font-size:20px; }.alp_client-attribution > span > span { font-size:13px; }
+ .alp_demo-panel-heading h2 { font-size:20px; }.alp_demo-panel-heading p { font-size:11px; }.alp_demo-metric > div > span { font-size:10px; }.alp_demo-metric strong { font-size:21px; }.alp_demo-metric small { font-size:10px; }.alp_demo-metric { min-height:122px; }.alp_demo-card-heading h3 { font-size:14px; }
+ .alp_demo-settings input,.alp_demo-dialog input,.alp_demo-search input { font-size:16px; }
+}

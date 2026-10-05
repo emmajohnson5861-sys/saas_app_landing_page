@@ -1,0 +1,38 @@
+{
+  "operations-dashboard": {
+    "src": "/portfolio/operations-dashboard.webp",
+    "width": 1600,
+    "height": 1200,
+    "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADQAQCdASoQAAwABABoJZwAAuQ2ePbJAADiH5LlTY9Imcza/U2BCC7UHd8nvOjojtzMugpr2ipuF2UxGBjmXmIpYAA="
+  },
+  "grocery-mobile": {
+    "src": "/portfolio/grocery-mobile.webp",
+    "width": 1600,
+    "height": 1200,
+    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAQCdASoQAAwABABoJQAAYop1J1gNwAAA9hW/bZx/6xre6hMKlzZzl+O5EoEuymf+ir8PRW4webUtTOfQWGNGTXPo96rAAAA="
+  },
+  "wellness-mobile": {
+    "src": "/portfolio/wellness-mobile.webp",
+    "width": 1600,
+    "height": 1095,
+    "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAwAgCdASoQAAwABABoJYgCdADNEyF08hASAAD2vpuM5Ab6vF7dc7eTkrfEO9lxd2vSBrSR+dqsKmT70vVMS6g78I1ecGWXswXJQD0OymLrf/9pVFeYooCLn/oA337cQAA="
+  },
+  "commerce-platform": {
+    "src": "/portfolio/commerce-platform.webp",
+    "width": 1600,
+    "height": 1200,
+    "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAwABABoJZwAAuhIZ40eShAA/olE7LbmZHzehAG7ZHJZYoFsk6tnACzDnFukmR8vb0QTxUpAuom25iTnf/wnzPfXwRAA"
+  },
+  "creator-workspace": {
+    "src": "/portfolio/creator-workspace.webp",
+    "width": 1600,
+    "height": 1200,
+    "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoQAAwABABoJaQAAuQoJ5KtVwAA/uEzhIdjfspDjqj3TyrtgmOAkn4OVgFIBOPSz5GA2zyvszczSoAGvuwD49NjnUlQNAAA"
+  },
+  "fashion-mobile": {
+    "src": "/portfolio/fashion-mobile.webp",
+    "width": 1200,
+    "height": 1600,
+    "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoQAAwABABoJaQAD48QH0BQ3VpAAP7TioD9OH9Yt6ZMh1fero9jznNGwyWWup1ftmCw4SbhHHddOHzc0hOYAMugioHa2Qp93iVAk7K15ejMaVj25LIILUYsFvwsBAAA"
+  }
+}

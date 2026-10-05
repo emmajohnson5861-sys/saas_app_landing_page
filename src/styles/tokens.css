@@ -1,0 +1,214 @@
+/* ALGOFORT LANDING PAGE — edit this file to change the entire design system.
+   All custom properties and authored classes use the alp_ prefix.
+   Font files are configured once in src/app/layout.tsx. */
+:root {
+  --alp_loader-logo-width: clamp(168px, 18vw, 230px);
+  --alp_loader-counter-size: 32px;
+  --alp_section-gap: 120px;
+  --alp_text-mask-bleed: .16em;
+  --alp_section-edge: calc(var(--alp_section-gap) / 2);
+  --alp_sun-copy-top: 60px;
+  --alp_sun-copy-width: 900px;
+  --alp_sun-description-width: 620px;
+  --alp_sun-title-size: clamp(42px, 5vw, 72px);
+  --alp_sun-body-size: 19px;
+  --alp_sun-app-offset: 280px;
+  --alp_sun-ring-overlap: 64px;
+  --alp_sun-orbit-width: 100%;
+  --alp_sun-ring-inset: 4%;
+  --alp_sun-ring-cutout: 84%;
+  --alp_sun-inner-inset: 11.36%;
+  --alp_sun-rim-width: clamp(1px, .14vw, 2px);
+  --alp_sun-glow-opacity: .7;
+  --alp_hero-flow-font: 14px;
+  --alp_hero-line-draw-duration: 3.4s;
+  --alp_clients-padding: clamp(70px, 8vw, 120px);
+  --alp_clients-aside-width: 240px;
+  --alp_clients-quote-size: clamp(30px, 3.25vw, 42px);
+  --alp_clients-quote-height: 330px;
+  --alp_clients-quote-inset: 64px;
+  --alp_ending-radius: 32px;
+  --alp_footer-surface: #e8e4de;
+  --alp_footer-padding-top: clamp(80px, 8vw, 110px);
+  --alp_portfolio-card-height: clamp(350px, 40vw, 500px);
+  --alp_portfolio-radius: 24px;
+  --alp_portfolio-grid-gap: 12px;
+  --alp_portfolio-intro-gap: 58px;
+  --alp_portfolio-title-size: 21px;
+  --alp_scroll-offset: 20px;
+  --alp_product-dark: #0d0f11;
+  --alp_product-cards-width: 1440px;
+  --alp_product-cards-gutter: clamp(20px, 2.2vw, 40px);
+  --alp_product-card-size: 28px;
+  --alp_product-gallery-gap: 13px;
+  --alp_product-screen-row-gap: 70px;
+  --alp_cap-accent: var(--alp_color-accent);
+  --alp_cap-ink: #010101;
+  --alp_cap-line: color-mix(in srgb,var(--alp_color-accent) 12%,transparent);
+  --alp_cap-soft: color-mix(in srgb,var(--alp_color-accent) 6%,transparent);
+  --alp_page-surface: #fdfbf8;
+  --alp_page-gradient-height: 1600px;
+  --alp_page-glow: color-mix(in srgb,var(--alp_color-accent) 8%,transparent);
+  --alp_page-glow-soft: color-mix(in srgb,var(--alp_color-accent) 4%,transparent);
+  --alp_button-3d-radius: 11px;
+  --alp_button-compact-height: 39px;
+  --alp_button-orange-gradient: linear-gradient(180deg,color-mix(in srgb,var(--alp_color-accent),white 18%) 0%,var(--alp_color-accent) 38%,var(--alp_color-accent) 100%);
+  --alp_button-white-gradient: linear-gradient(180deg,#fff 0%,#fafafa 38%,#f0f0f0 78%,#f5f5f5 100%);
+  --alp_intro-width: 1140px;
+  --alp_intro-spacing: clamp(60px, 6vw, 90px);
+  --alp_intro-heading: clamp(2.5rem, 5.2vw, 4.5rem);
+  --alp_intro-body-size: clamp(18px, 1.75vw, 22px);
+  --alp_intro-detail-size: 16px;
+  --alp_card-heading-size: clamp(26px, 2.4vw, 32px);
+  --alp_card-body-size: 18px;
+  --alp_label-size: 13px;
+  --alp_ui-label-size: 12px;
+  --alp_heading-weight: 600;
+  --alp_heading-tracking: -.04em;
+  --alp_logos-duration: 44s;
+  --alp_logos-gap: clamp(36px, 5vw, 72px);
+  --alp_logos-item-width: 150px;
+  --alp_cta-height: 56px;
+  --alp_cta-font-size: 16px;
+  --alp_intro-gap: clamp(40px, 4.6vw, 66px);
+  --alp_intro-surface: #f6f2ec;
+  --alp_intro-background: #fdfbf8;
+  --alp_intro-border: #ecdfd0;
+  --alp_demo-width: 1140px;
+  --alp_button-motion: 800ms;
+  --alp_button-motion-ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --alp_button-motion-padding: 44px;
+  --alp_button-motion-arrow: 22px;
+  --alp_demo-sidebar-width: 184px;
+  --alp_demo-line: #eff0ec;
+  --alp_demo-height: 660px;
+  --alp_demo-height-mobile: 1020px;
+  --alp_demo-surface: #f8f9f6;
+  --alp_demo-field: #f1f3ee;
+  --alp_line-duration: 4800ms;
+  --alp_chart-duration: 1400ms;
+  --alp_dropdown-duration: 220ms;
+  --alp_demo-accent-soft: #fff1e4;
+  --alp_demo-font: 14px;
+  --alp_demo-heading-size: 22px;
+  --alp_demo-value-size: 26px;
+  --alp_demo-card-padding: 20px;
+  --alp_demo-gap: 18px;
+  --alp_demo-chart-height: 165px;
+  --alp_demo-shadow: none;
+  --alp_color-bg: #f4f4f2;
+  --alp_color-ink: #151616;
+  --alp_color-muted: #62645f;
+  --alp_color-accent: #f47a1f;
+  --alp_color-accent-hover: var(--alp_color-accent);
+  --alp_color-accent-text: var(--alp_color-accent);
+  --alp_color-accent-heading: var(--alp_color-accent);
+  --alp_color-line: #d9dbd5;
+  --alp_color-white: #ffffff;
+  --alp_color-panel: #191c1d;
+  --alp_color-panel-raised: #242829;
+  --alp_color-panel-muted: #a1a7a5;
+  --alp_color-positive: #b9d79a;
+  --alp_color-glow: #f47a1f17;
+  --alp_color-grid: #15161605;
+  --alp_container-max: 1440px;
+  --alp_page-gutter: clamp(1.25rem, 4.8vw, 5rem);
+  --alp_header-height: 84px;
+  --alp_logo-width: 168px;
+  --alp_logo-width-mobile: 140px;
+  --alp_hero-min-height: 710px;
+  --alp_hero-copy-width: 420px;
+  --alp_showcase-stage-height: 432px;
+  --alp_showcase-phone-width: 158px;
+  --alp_showcase-phone-height: 290px;
+  --alp_font-body: var(--alp_font-sans), Arial, sans-serif;
+  --alp_font-heading: var(--alp_font-display), var(--alp_font-sans), Arial, sans-serif;
+  --alp_text-xs: 0.8125rem;
+  --alp_text-sm: 1rem;
+  --alp_text-base: 1.125rem;
+  --alp_text-lg: 1.25rem;
+  --alp_text-xl: 1.5rem;
+  --alp_text-hero: clamp(3.5rem, 5.55vw, 5.5rem);
+  --alp_leading-body: 1.75;
+  --alp_leading-heading: 1.01;
+  --alp_tracking-heading: -0.065em;
+  --alp_tracking-label: 0.13em;
+  --alp_space-1: 0.25rem;
+  --alp_space-2: 0.5rem;
+  --alp_space-3: 0.75rem;
+  --alp_space-4: 1rem;
+  --alp_space-5: 1.25rem;
+  --alp_space-6: 1.5rem;
+  --alp_space-8: 2rem;
+  --alp_space-10: 2.5rem;
+  --alp_space-12: 3rem;
+  --alp_space-16: 4rem;
+  --alp_space-20: 5rem;
+  --alp_radius-sm: 8px;
+  --alp_radius-md: 14px;
+  --alp_radius-lg: 22px;
+  --alp_radius-pill: 999px;
+  --alp_button-height: 56px;
+  --alp_icon-size: 20px;
+  --alp_duration-fast: 180ms;
+  --alp_duration-reveal: 650ms;
+  --alp_ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --alp_shadow-showcase: 0 28px 55px -22px #25252242;
+
+  /* SaaS campaign — typography, device composition and raised controls. */
+  --alp_saas-heading-size: clamp(2.625rem, 6.65vw, 6rem);
+  --alp_saas-heading-width: 1140px;
+  --alp_saas-copy-width: 610px;
+  --alp_saas-copy-top: 145px;
+  --alp_saas-heading-leading: 1.12;
+  --alp_saas-tile-size: 61px;
+  --alp_saas-device-width: 284px;
+  --alp_saas-device-height: 596px;
+  --alp_saas-device-offset: 292px;
+  --alp_saas-device-radius: 48px;
+  --alp_saas-stage-height: 550px;
+  --alp_saas-stage-width: 1040px;
+  --alp_saas-stage-gap: 44px;
+  --alp_saas-screen-bg: #fafbf9;
+  --alp_saas-screen-muted: #747b78;
+  --alp_saas-screen-line: #e6e9e3;
+  --alp_saas-screen-soft: #f0f2ed;
+  --alp_saas-green: #497551;
+  --alp_saas-green-bg: #edf4e9;
+  --alp_saas-orange-soft: #fff0e4;
+  --alp_saas-device-metal: #bfc1bd;
+  --alp_saas-device-dark: #141615;
+  --alp_saas-device-shadow: 0 22px 35px -15px #1b1d192e;
+  --alp_saas-button-shadow: 0 7px 0 -4px #151616, 0 12px 15px -7px #1516164a;
+  --alp_saas-orange-shadow: 0 7px 0 -4px #a84706, 0 12px 18px -7px #ac551e50;
+  --alp_saas-white-shadow: 0 3px 0 #ddddda, 0 6px 8px -3px #15161612;
+  --alp_app-text-tiny: 7px;
+  --alp_app-text-xs: 8px;
+  --alp_app-text-sm: 9px;
+  --alp_app-text-base: 10px;
+  --alp_app-text-lg: 12px;
+  --alp_app-text-xl: 14px;
+  --alp_app-text-brand: 22px;
+  --alp_app-text-title: 24px;
+  --alp_app-text-value: 30px;
+  --alp_saas-mobile-device-scale: .66;
+}
+
+@media (max-width: 1124px) {
+  :root { --alp_product-screen-row-gap: 48px; }
+}
+
+@media (max-width: 768px) {
+  :root { --alp_product-screen-row-gap: 32px; }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --alp_header-height: 74px;
+    --alp_text-hero: clamp(2.65rem, 8.5vw, 4.5rem);
+    --alp_page-gutter: 1.25rem;
+    --alp_hero-min-height: auto;
+  }
+}
+
+

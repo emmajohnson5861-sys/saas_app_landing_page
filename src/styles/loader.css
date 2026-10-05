@@ -1,0 +1,28 @@
+/* Monochrome CSS twisting loader, with the existing brand logo handoff. */
+.alp_page-loader { position:fixed; inset:0; z-index:150; color:#000; }
+.alp_loader-backdrop { position:absolute; inset:0; background:#fff; transition:opacity .85s ease; }
+.alp_loader-meta { position:absolute; inset:36px var(--alp_page-gutter) auto; display:flex; justify-content:space-between; gap:20px; color:#707070; font-size:10px; letter-spacing:.08em; transition:opacity .4s,transform .4s; }
+.alp_loader-logo { position:absolute; left:50%; top:calc(50% - 165px); width:var(--alp_loader-logo-width); transform:translate(-50%,-50%); transform-origin:top left; will-change:transform; }
+.alp_loader-logo img { display:block; width:100%; height:auto; }
+.alp_loader-center { position:absolute; top:50%; left:50%; width:calc(100% - 2 * var(--alp_page-gutter)); max-width:600px; transform:translate(-50%,-50%); transition:opacity .45s ease; }
+.alp_loader-tagline { position:absolute; top:calc(50% + 125px); left:var(--alp_page-gutter); right:var(--alp_page-gutter); text-align:center; margin:0; color:#707070; font-size:13px; line-height:1.5; transition:opacity .4s,transform .4s; }
+.alp_loader-bottom { position:absolute; left:var(--alp_page-gutter); right:var(--alp_page-gutter); bottom:40px; display:grid; grid-template-columns:1fr auto; align-items:end; gap:20px 24px; transition:opacity .4s,transform .4s; }
+.alp_loader-caption { padding-bottom:4px; font-size:12px; color:#707070; }
+.alp_loader-counter { display:flex; align-items:baseline; gap:5px; font-family:var(--alp_font-heading); font-size:var(--alp_loader-counter-size); line-height:1; font-weight:500; letter-spacing:-.05em; font-variant-numeric:tabular-nums; }
+.alp_loader-digits { display:flex; }
+.alp_loader-digit { display:block; width:.64em; height:1em; overflow:hidden; }
+.alp_loader-reel { display:block; will-change:transform; }
+.alp_loader-reel > span { display:flex; align-items:center; justify-content:center; height:1em; letter-spacing:0; }
+.alp_loader-percent { font-size:.48em; letter-spacing:0; }
+.alp_loader-progress { grid-column:1/-1; height:1px; background:#e8e8e8; overflow:hidden; }
+.alp_loader-progress-fill { display:block; width:100%; height:100%; background:#000; transform:scaleX(0); transform-origin:left; }
+.alp_page-loader[data-leaving="true"] .alp_loader-backdrop,.alp_page-loader[data-leaving="true"] .alp_loader-center { opacity:0; }
+.alp_page-loader[data-leaving="true"] .alp_loader-meta,.alp_page-loader[data-leaving="true"] .alp_loader-tagline,.alp_page-loader[data-leaving="true"] .alp_loader-bottom { opacity:0; transform:translateY(-12px); }
+html.alp_loading,html.alp_loading body { overflow:hidden; }
+.alp_loading .alp_header .alp_logo { visibility:hidden; }
+@media(max-width:640px) {
+  .alp_loader-meta { top:24px; font-size:8px; }
+  .alp_loader-logo { top:calc(50% - 120px); }
+  .alp_loader-tagline { top:calc(50% + 90px); font-size:11px; }
+  .alp_loader-bottom { bottom:28px; }
+}
