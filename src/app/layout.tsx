@@ -17,5 +17,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" className={`${sans.variable} ${display.variable}`}><body className="alp_body"><SmoothScroll /><a className="alp_skip-link" href="#alp_main">Skip to content</a>{children}</body></html>;
+  return (
+    <html lang="en" className={`${sans.variable} ${display.variable}`} suppressHydrationWarning>
+      <body className="alp_body" suppressHydrationWarning>
+        <SmoothScroll />
+        <a className="alp_skip-link" href="#alp_main">Skip to content</a>
+        {children}
+      </body>
+    </html>
+  );
 }
