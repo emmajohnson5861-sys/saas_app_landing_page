@@ -1,5 +1,3 @@
-import { capabilities } from './capabilities';
-
 /** Summaries of feedback already published on the supplied Algofort website.
  * Replace copy, names, and initials here when updating client stories.
  * No third-party awards or ratings are presented as Algofort credentials.
@@ -36,11 +34,11 @@ export const landingFooter = {
     { label: 'Instagram', href: 'https://instagram.com/algofort' },
     { label: 'Facebook', href: 'https://facebook.com/algofort' },
   ],
-  services: capabilities.items.map(item => ({ label: item.title, href: capabilities.visible ? '#alp_capabilities' : '#alp_product-services' })),
-  explore: [
-    { label: 'About us', href: '#alp_intro' },
-    { label: 'Our work', href: '#alp_portfolio' },
-    { label: 'Client stories', href: '#alp_clients' },
+  services: [
+    { label: 'Web Development', href: '#alp_product-services' },
+    { label: 'Brand Identity', href: '#alp_product-services' },
+    { label: 'SaaS App Development', href: '#alp_product-services' },
+    { label: 'Mobile App Development', href: '#alp_product-services' },
   ],
   privacy: { label: 'Privacy Policy', href: 'https://algoforts.vercel.app/#privacy' },
   revealDistance: 0.5,

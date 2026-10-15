@@ -21,7 +21,7 @@ export function SaaSFooter({ config }: { config: SaaSLandingConfig }) {
         <nav className="alp_footer-navigation" aria-label="Footer navigation">
           <div className="alp_footer-column"><h3>Contact us</h3><ul><li><span className="alp_footer-contact-label">Our email</span><a href={`mailto:${content.email}`}>{content.email}</a></li><li><a href={content.phone.href}>{content.phone.label}</a></li><li className="alp_footer-contact-note">{content.contactNote}</li></ul></div>
           <div className="alp_footer-column"><h3>Follow us</h3><ul>{content.socials.map(link => <li key={link.label}><a className="alp_footer-social" href={link.href} target="_blank" rel="noopener noreferrer">{link.label}<ArrowUpRight aria-hidden="true"/></a></li>)}</ul></div>
-          <div className="alp_footer-column"><h3>Services</h3><ul>{content.services.map(link => <li key={link.label}><a href={link.href}>{link.label}</a></li>)}</ul><ul className="alp_footer-explore">{content.explore.map(link => <li key={link.label}><a href={link.href}>{link.label}</a></li>)}</ul></div>
+          <div className="alp_footer-column"><h3>Services</h3><ul>{content.services.map(link => <li key={link.label}><a href={link.href}>{link.label}</a></li>)}</ul></div>
         </nav>
       </div>
       <div className="alp_footer-bottom"><p>© {new Date().getFullYear()} {config.brand.name}. All rights reserved <span aria-hidden="true">·</span> <a href={content.privacy.href}>{content.privacy.label}</a></p><a className="alp_footer-top" href="#alp_page-top">Back to the top <ArrowUp aria-hidden="true"/></a></div>
