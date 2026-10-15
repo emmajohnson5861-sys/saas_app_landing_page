@@ -1,16 +1,16 @@
 export const productExperience = {
   services: {
-    eyebrow: 'One connected product',
-    title: 'Built around your business.',
-    accent: 'Ready for what’s next.',
-    phoneTitle: 'Your SaaS, connected.',
-    phoneLink: 'Explore the experience',
+    eyebrow: 'Our Services',
+    title: 'Tailored software services.',
+    accent: 'Engineered to scale.',
+    phoneTitle: 'Services built to scale.',
+    phoneLink: 'Explore our services',
     items: [
-      { title: 'Product Design', detail: 'Clear, intuitive experiences your users will love.' },
-      { title: 'SaaS Engineering', detail: 'From your first MVP to a product built for scale.' },
-      { title: 'AI & Automation', detail: 'Smarter workflows. Less manual work.' },
-      { title: 'APIs & Integrations', detail: 'Connect every part of your product.' },
-      { title: 'Cloud & Growth', detail: 'Reliable foundations for your next chapter.' },
+      { title: 'Custom SaaS', detail: 'Scalable multi-tenant apps built for modern growth.' },
+      { title: 'CRM Software', detail: 'Streamline lead journeys and close deals faster.' },
+      { title: 'ERP Software', detail: 'Unified operations. Automated workflows.' },
+      { title: 'Dashboard & Analytics', detail: 'Actionable metrics and growth insights.' },
+      { title: 'API Integration', detail: 'Seamless connectivity across your tech stack.' },
     ],
   },
   development: {

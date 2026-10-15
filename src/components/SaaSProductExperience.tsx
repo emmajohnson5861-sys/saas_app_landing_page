@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { BrainCircuit, Cloud, Code2, Menu, Network, PencilRuler } from 'lucide-react';
+import { BarChart3, Boxes, Code2, Menu, Network, Users } from 'lucide-react';
 import type { SaaSLandingConfig } from '@/config/saas';
 import { productExperience as content } from '@/config/product-experience';
 import assets from '@/config/product-assets.json';
@@ -7,7 +7,7 @@ import { ProductExperienceMotion } from './ProductExperienceMotion';
 import { SectionEyebrow } from './SectionEyebrow';
 import { AnimatedButtonContent } from './AnimatedButtonContent';
 
-const icons = [PencilRuler, Code2, BrainCircuit, Network, Cloud];
+const icons = [Code2, Users, Boxes, BarChart3, Network];
 const base = '/product-experience/';
 function Asset({ name, className, alt = '', sizes }: { name: keyof typeof assets; className?: string; alt?: string; sizes: string }) {
   return <Image src={base + name} {...assets[name]} alt={alt} className={className} sizes={sizes} />;
