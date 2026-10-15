@@ -12,6 +12,7 @@
 @import "../styles/buttons.css";
 @import "../styles/hero-sun.css";
 @import "../styles/loader.css";
+@import "../styles/entrance-popup.css";
 
 
 * { box-sizing: border-box; }
