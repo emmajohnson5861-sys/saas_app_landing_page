@@ -396,6 +396,40 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--alp_color-accen
   .alp_mobile-menu-cta:hover {
     background: color-mix(in srgb, var(--alp_color-accent, #ff7400) 88%, white);
   }
+
+  /* 3D button styling for mobile menu CTA in SaaS landing page */
+  .alp_saas-page .alp_mobile-menu-cta.alp_button-3d,
+  .alp_mobile-menu-cta.alp_button-3d {
+    width: 100%;
+    min-height: 52px;
+    margin-top: 26px;
+    margin-bottom: 4px;
+    padding: 14px 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--alp_button-3d-radius, 11px);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    background: var(--alp_button-bg);
+    color: var(--alp_button-text);
+    border: 1px solid var(--alp_button-edge);
+    box-shadow: var(--alp_button-shadow);
+    text-shadow: var(--alp_button-text-shadow);
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  .alp_saas-page .alp_mobile-menu-cta.alp_button-3d:hover,
+  .alp_mobile-menu-cta.alp_button-3d:hover {
+    background: var(--alp_button-bg);
+    color: var(--alp_button-text);
+    transform: translateY(-1px) !important;
+  }
+  .alp_saas-page .alp_mobile-menu-cta.alp_button-3d:active,
+  .alp_mobile-menu-cta.alp_button-3d:active {
+    transform: translateY(1px) !important;
+  }
   .alp_hero-grid { display: flex; flex-direction: column; align-items: stretch; gap: 52px; padding-block: 55px 45px; }
   .alp_hero-copy { width: 100%; max-width: 580px; margin-inline: auto; }
   .alp_eyebrow { font-size: 8px; letter-spacing: .1em; gap: 10px; margin-bottom: var(--alp_space-6); }

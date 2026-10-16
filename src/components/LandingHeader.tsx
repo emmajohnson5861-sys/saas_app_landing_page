@@ -300,12 +300,18 @@ export function LandingHeader({ config, variant = "default" }: { config: HeaderC
         </div>
 
         <a
-          className="alp_mobile-menu-cta"
+          className={`alp_mobile-menu-cta ${variant === "saas" ? "alp_button alp_button-3d alp_button-orange" : ""}`}
           href={config.primaryCta.href}
           onClick={() => setIsOpen(false)}
         >
-          <span>{config.primaryCta.label}</span>
-          <ArrowUpRight className="alp_icon" aria-hidden="true" />
+          {variant === "saas" ? (
+            <AnimatedButtonContent label={config.primaryCta.label} />
+          ) : (
+            <>
+              <span>{config.primaryCta.label}</span>
+              <ArrowUpRight className="alp_icon" aria-hidden="true" />
+            </>
+          )}
         </a>
       </div>
     </>
