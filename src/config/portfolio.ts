@@ -2,7 +2,7 @@ import assets from './portfolio-assets.json';
 
 /** Approval-stage concepts. Replace images/copy here with verified client work. */
 export const portfolio = {
-  eyebrow: 'Our portfolio',
+  eyebrow: 'Our Portfolio',
   title: 'Distinct products.',
   titleAccent: 'Built to scale.',
   description: 'A glimpse of the interfaces, platforms, and digital experiences we can build around your business.',

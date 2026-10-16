@@ -294,7 +294,7 @@ export function LandingHeader({ config, variant = "default" }: { config: HeaderC
         </nav>
 
         <div className="alp_mobile-menu-contacts">
-          <p>Contacts</p>
+          <p>Contact</p>
           <a href={landingFooter.phone.href}>{landingFooter.phone.label}</a>
           <a href={`mailto:${landingFooter.email}`}>{landingFooter.email}</a>
         </div>

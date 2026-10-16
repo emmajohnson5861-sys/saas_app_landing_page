@@ -66,7 +66,7 @@ export const saasLandingConfig: SaaSLandingConfig = {
   brand: landingConfig.brand,
   metadata: {
     title: "SaaS App Development Services | Algofort",
-    description: "Turn your SaaS idea into a scalable product with Algofort. From UX design and MVP development to subscriptions, integrations and launch.",
+    description: "Turn your SaaS idea into a scalable product with Algofort. From UX design and MVP development to subscriptions, integrations, and launch.",
   },
   navigation: [{ label: "Home", href: "/" }, ...landingConfig.navigation.map(link => link.label === 'Work' ? { ...link, href: '#alp_portfolio' } : link.label === 'Reviews' ? { ...link, href: '#alp_clients' } : link)],
   primaryCta: { ...landingConfig.primaryCta, label: "Get Started" },
@@ -82,7 +82,7 @@ export const saasLandingConfig: SaaSLandingConfig = {
       layers: [
         { label: "01 / Experience", title: "Made for your users", capabilities: ["User Experience", "Product Design", "Web & Mobile"] },
         { label: "02 / Product", title: "Built around your business", capabilities: ["Web Applications", "Subscriptions", "Integrations"] },
-        { label: "03 / Foundation", title: "Ready for your next chapter", capabilities: ["APIs & integrations", "Data", "Cloud infrastructure"] },
+        { label: "03 / Foundation", title: "Ready for your next chapter", capabilities: ["APIs & Integrations", "Data", "Cloud Infrastructure"] },
       ],
       footer: "One product. Every layer considered.",
     },
@@ -101,7 +101,7 @@ export const saasLandingConfig: SaaSLandingConfig = {
   // Sample UI data for an illustrative SaaS workspace. These are not client results.
   product: {
     name: "orbit",
-    workspace: "Acme workspace",
+    workspace: "Acme Workspace",
     caption: "SaaS interface concept · Dashboards, collaboration & automation",
     overview: {
       greeting: "Good morning, Alex",

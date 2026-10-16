@@ -30,7 +30,7 @@ export const landingConfig: LandingConfig = {
   brand: { name: "Algofort", logo: "/brand/algofort-dark.png", home: "/" },
   metadata: {
     title: "Custom Web Development & Digital Products | Algofort",
-    description: "Algofort designs and develops high-performance websites, custom software, mobile apps and digital products for growing businesses.",
+    description: "Algofort designs and develops high-performance websites, custom software, mobile apps, and digital products for growing businesses.",
   },
   navigation: [
     { label: "Work", href: `${website}/#sec-projects` },
@@ -43,7 +43,7 @@ export const landingConfig: LandingConfig = {
     eyebrow: "Digital product & development agency",
     headline: ["We build digital", "experiences that"],
     accentLine: "drive growth.",
-    description: "Algofort designs and develops high-performance websites, custom software and digital products built around real business goals.",
+    description: "Algofort designs and develops high-performance websites, custom software, and digital products built around real business goals.",
     secondaryCta: { label: "View Our Work", href: `${website}/#sec-projects` },
     reassurance: ["Strategy-led design", "Performance-first development"],
     closingNote: "Built with purpose. Made for what’s next.",
@@ -59,7 +59,7 @@ export const landingConfig: LandingConfig = {
         { label: "Active customers", value: "2,845", trend: "+12.8%" },
         { label: "Conversion rate", value: "4.82%", trend: "+2.4%" },
       ],
-      chartLabel: "Revenue overview", chartValue: "$48,250.00", activity: "Everything, connected.", activityDetail: "One workspace. More possibilities.",
+      chartLabel: "Revenue overview", chartValue: "$48,250.00", activity: "Everything connected.", activityDetail: "One workspace. More possibilities.",
     },
     mobile: {
       name: "FORM®", title: "Everyday,\nelevated.", image: "/images/fashion.webp", imageAlt: "Editorial fashion image from the Algofort reference website", collection: "Explore the collection",

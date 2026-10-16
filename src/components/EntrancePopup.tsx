@@ -183,13 +183,13 @@ export function EntrancePopup() {
         <div className="entrance-popup-content">
           <div className="entrance-popup-content-inner">
             <p className="entrance-popup-kicker section-label">
-              <span className="section-plus" aria-hidden="true">+</span> Let's talk
+              <span className="section-plus" aria-hidden="true">+</span> Let’s talk
             </p>
             <h2 className="entrance-popup-title" id="popup-title">
               Have a project in mind?
             </h2>
             <p className="entrance-popup-lead">
-              Tell us a little about it. A new website, a redesign, or an idea you’re still figuring out — we’d like to hear it.
+              Tell us a little about your project. Whether it’s a new web application, a product redesign, or an idea you’re still exploring, we’d love to hear about it.
             </p>
 
             <form ref={formRef} className="entrance-popup-form" onSubmit={handleSubmit} aria-label="Project enquiry popup form">
@@ -255,7 +255,7 @@ export function EntrancePopup() {
                     checked={dontShowAgain}
                     onChange={(e) => setDontShowAgain(e.target.checked)}
                   />
-                  <span>Don't show this again</span>
+                  <span>Don’t show this again</span>
                 </label>
               </div>
             </form>
