@@ -61,6 +61,7 @@
 .alp_footer-top svg { width:17px; height:17px; stroke-width:1.5; }
 @media(max-width:1023px) {
  .alp_clients-layout { grid-template-columns:1fr; gap:40px; }.alp_clients-aside { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }.alp_clients-description { margin:0; max-width:none; }.alp_clients-strengths { display:none; }
+ .alp_client-story blockquote { min-height:0; }
  .alp_footer-layout { grid-template-columns:1fr; gap:48px; }.alp_footer-navigation { max-width:700px; grid-template-columns:1fr 1fr 1.2fr; }.alp_footer-invitation h2 { max-width:650px; }.alp_footer-description { max-width:580px; }
 }
 @media(max-width:640px) {

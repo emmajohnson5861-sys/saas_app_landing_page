@@ -523,3 +523,28 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--alp_color-accen
   padding-top: var(--alp_section-gap);
 }
 
+@media (max-width: 767px) {
+  .alp_saas-page .alp_sun-hero .alp_logos {
+    margin-top: 60px;
+    padding-top: 0;
+  }
+
+  .alp_saas-page .alp_intro {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .alp_saas-page .alp_product-services {
+    padding-top: 60px;
+  }
+
+  .alp_saas-page .alp_portfolio {
+    padding-top: 60px;
+  }
+
+  .alp_saas-page .alp_clients {
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+}
+

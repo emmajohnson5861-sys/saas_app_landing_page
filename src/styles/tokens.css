@@ -208,6 +208,7 @@
     --alp_text-hero: clamp(2.65rem, 8.5vw, 4.5rem);
     --alp_page-gutter: 1.25rem;
     --alp_hero-min-height: auto;
+    --alp_clients-quote-height: 0;
   }
 }
 
